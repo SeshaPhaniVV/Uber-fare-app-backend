@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_09_13_170536) do
     t.string "drivername"
     t.float "rating"
     t.integer "rides_count", default: 0
+    t.integer "ratings_count", default: 0
     t.integer "status", default: 1
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(version: 2020_09_13_170536) do
     t.datetime "ride_book_time"
     t.datetime "ride_start_time"
     t.datetime "ride_end_time"
+    t.datetime "ride_estimated_end_time"
     t.integer "rating", default: -1
     t.float "fare", default: -1.0
     t.datetime "created_at", precision: 6, null: false

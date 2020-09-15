@@ -6,6 +6,7 @@ class CreateRides < ActiveRecord::Migration[6.0]
       t.datetime :ride_book_time
       t.datetime :ride_start_time
       t.datetime :ride_end_time
+      t.datetime :ride_estimated_end_time
       t.integer :rating, default: -1
       t.float :fare, default: -1
 

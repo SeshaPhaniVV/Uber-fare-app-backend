@@ -3,7 +3,10 @@ class UsersController < ApplicationController
   
     # REGISTER
     def create
-      @user = User.create(user_params)
+      username = params[:username]
+      password = params[:password]
+      user_type = rand(1..3)
+      @user = User.create({username: username, password: password, user_type: user_type})
       if @user.valid?
         token = encode_token({user_id: @user.id})
         return get_user_json(@user, token);
